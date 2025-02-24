@@ -4,10 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('leaderboard');
-});
-
-Route::get('/leaderboard', function () {
-    return view('leaderboard');
 })->name('leaderboard');
 
 Route::get('/profile', function () {
