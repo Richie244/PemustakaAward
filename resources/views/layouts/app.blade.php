@@ -16,7 +16,7 @@
             <ul>
                 <li class="mb-3">
                     <a href="{{ route('leaderboard') }}" class="block p-3 rounded-lg font-semibold 
-                        {{ Request::is('leaderboard') ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+                        {{ Request::is('/') ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
                         Leaderboard
                     </a>
                 </li>
@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <a href="{{ route('aksara') }}" class="block p-3 rounded-lg font-semibold 
-                        {{ Request::is('aksara') ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+                        {{ Request::is('aksara') || Request::is('formaksaradinamika') ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
                         Aksara Dinamika
                     </a>
                 </li>
