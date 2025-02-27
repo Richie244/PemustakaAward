@@ -13,7 +13,7 @@
                 <div class="ml-4 flex flex-col justify-center h-20">
                     <h2 class="text-xl font-bold text-white">User 10</h2>
                     <p class="text-white">LEVEL 1</p>
-                    <p class="text-2xl font-bold text-yellow-500">🏆 815</p>
+                    <p class="text-2xl font-bold text-yellow-500"><img src="{{ asset('assets/images/poin.png') }}" alt="poin" class="inline-block w-6 h-6"> 815</p>
                 </div>
             </div>
             <div class="flex">
@@ -35,10 +35,10 @@
                     <p>LEVEL 3</p>
                 </div>
                 <div class="flex justify-between mb-3 text-2xl font-bold">
-                    <p class="text-yellow-500 ">🏆 0</p>
-                    <p class="text-yellow-500 ml-4">🏆 400</p>
-                    <p class="text-yellow-500 ml-4">🏆 800</p>
-                    <p class="text-yellow-500">🏆 1200</p>
+                    <p class="text-yellow-500 "><img src="{{ asset('assets/images/poin.png') }}" alt="poin" class="inline-block w-6 h-6"> 0</p>
+                    <p class="text-yellow-500 ml-4"><img src="{{ asset('assets/images/poin.png') }}" alt="poin" class="inline-block w-6 h-6"> 400</p>
+                    <p class="text-yellow-500 ml-4"><img src="{{ asset('assets/images/poin.png') }}" alt="poin" class="inline-block w-6 h-6"> 800</p>
+                    <p class="text-yellow-500"><img src="{{ asset('assets/images/poin.png') }}" alt="poin" class="inline-block w-6 h-6"> 1200</p>
                 </div>
                 <div class="relative bg-gray-300 h-7 rounded-full mt-2">
                     <div
