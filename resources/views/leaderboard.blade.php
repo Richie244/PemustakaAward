@@ -7,17 +7,15 @@
 
         <!-- Background Biru -->
         <div class="relative bg-[rgba(31,76,109,1)] text-white pt-32 px-10 pb-28 rounded-t-[25px] min-h-[350px]">
-            <div class="flex justify-center space-x-10 items-end">
-                @foreach ([['name' => 'User 2', 'points' => 1000], ['name' => 'User 1', 'points' => 1200], ['name' => 'User 3', 'points' => 800]] as $index => $user)
-                    <div class="text-center">
-                        <div
-                            class="w-{{ $index == 1 ? '36' : '28' }} h-{{ $index == 1 ? '36' : '28' }} bg-gray-300 rounded-full mx-auto border-4 border-[rgba(251,195,77,1)]">
-                        </div>
-                        <p class="mt-2 font-bold font-rubik text-lg text-[rgba(251,195,77,1)]">{{ $user['name'] }}</p>
-                        <p class="text-md font-russo">{{ $user['points'] }}</p>
+            <div class="flex justify-center items-end">
+                <div class="text-center">
+                    <div class="w-36 h-36 bg-gray-300 rounded-full mx-auto border-4 border-[rgba(251,195,77,1)]">
                     </div>
-                @endforeach
+                    <p class="mt-2 font-bold font-rubik text-lg text-[rgba(251,195,77,1)]">User 1</p>
+                    <p class="text-md font-russo">1200</p>
+                </div>
             </div>
+
 
             <!-- Header Points Leaderboard -->
             <div class="absolute bottom-[-2px] left-0 w-full z-10">
@@ -38,7 +36,7 @@
                         <th class="p-3 font-rubik text-left border-t border-gray-300">Nama</th>
                         <th class="p-3 font-rubik text-left border-t border-gray-300">NIM</th>
                         <th class="p-3 font-rubik text-left border-t border-gray-300">Email</th>
-                        <th class="p-3 font-rubik text-center border-t border-gray-300">Points</th> 
+                        <th class="p-3 font-rubik text-center border-t border-gray-300">Points</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,7 +59,7 @@
                                     <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5">
                                     <span>{{ $user['points'] }}</span>
                                 </div>
-                            </td>                   
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
