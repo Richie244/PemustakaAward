@@ -11,34 +11,45 @@
 
                 <!-- Informasi User -->
                 <div class="ml-4 flex flex-col justify-center h-20">
-                    <h2 class="text-xl font-bold text-white">User 10</h2>
-                    <p class="text-white">LEVEL 1</p>
-                    <p class="text-2xl font-bold text-yellow-500">🏆 815</p>
+                    <h2 class="text-xl font-bold font-rubik text-white">User 10</h2>
+                    <p class="text-white font-rubik">LEVEL 1</p>
+                    <p class="text-2xl font-bold font-russo text-[#FFBC45] flex items-center">
+                        <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5 mr-1"> 815
+                    </p>
                 </div>
             </div>
             <div class="flex">
                 <div class="flex flex-col items-end ml-auto pr-20">
                     <div class="inline-flex items-end space-x-1">
-                        <p class="text-gray-600 text-3xl font-bold">PERINGKAT</p>
-                        <p class="text-6xl font-bold text-gray-800">21</p>
+                        <p class="text-gray-700 text-3xl font-bold font-rubik">PERINGKAT</p>
+                        <p class="text-6xl font-bold font-russo text-[#1F4C6D]">21</p>
                     </div>
-                    <a href="/"><button class="bg-[#1F4C6D] text-white px-4 py-2 rounded-md mt-2 mr-14">Leaderboard</button></a>
+                    <a href="/"><button
+                            class="bg-[#1F4C6D] text-white font-rubik px-4 py-2 rounded-md mt-2 mr-14">Leaderboard</button></a>
                 </div>
             </div>
 
             {{-- Progress Level --}}
             <div class="mt-10">
-                <div class="flex justify-between text-gray-700 font-bold">
+                <div class="flex justify-between text-gray-700 font-rubik font-bold">
                     <p>LEVEL 0</p>
                     <p>LEVEL 1</p>
                     <p>LEVEL 2</p>
                     <p>LEVEL 3</p>
                 </div>
-                <div class="flex justify-between mb-3 text-2xl font-bold">
-                    <p class="text-yellow-500 ">🏆 0</p>
-                    <p class="text-yellow-500 ml-4">🏆 400</p>
-                    <p class="text-yellow-500 ml-4">🏆 800</p>
-                    <p class="text-yellow-500">🏆 1200</p>
+                <div class="flex justify-between mb-3 text-2xl font-russo font-bold">
+                    <p class="text-[#FFBC45] flex items-center">
+                        <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5 mr-1"> 0
+                    </p>
+                    <p class="text-[#FFBC45] flex items-center ml-4">
+                        <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5 mr-1"> 400
+                    </p>
+                    <p class="text-[#FFBC45] flex items-center ml-4">
+                        <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5 mr-1"> 800
+                    </p>
+                    <p class="text-[#FFBC45] flex items-center">
+                        <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5 mr-1"> 1200
+                    </p>
                 </div>
                 <div class="relative bg-gray-300 h-7 rounded-full mt-2">
                     <div
@@ -47,34 +58,34 @@
                     <div class="bg-[#1F4C6D] h-7 w-1/3 rounded-full"></div>
                 </div>
 
-                <button class="block bg-[#1F4C6D] text-white px-4 py-2 rounded-md mt-4 ml-72"
+                <button class="block bg-[#1F4C6D] font-rubik text-white px-4 py-2 rounded-md mt-4 ml-72"
                     onclick="openModal()">Klaim</button>
-        </div>
-    </div>
-
-    {{-- Pencapaian --}}
-    <div class="bg-white  shadow-md p-6 mt-6">
-        <h3 class="text-lg font-bold mb-4 text-center">PENCAPAIAN</h3>
-        <div class="grid grid-cols-4 text-center text-lg font-semibold">
-            <div>
-                <p class="text-gray-500">Kunjungan</p>
-                <p class="text-3xl font-bold text-gray-800">32</p>
-            </div>
-            <div>
-                <p class="text-gray-500">Kegiatan</p>
-                <p class="text-3xl font-bold text-gray-800">3</p>
-
-            </div>
-            <div>
-                <p class="text-gray-500">Peminjaman</p>
-                <p class="text-3xl font-bold text-gray-800">0</p>
-            </div>
-            <div>
-                <p class="text-gray-500">Challenge</p>
-                <p class="text-3xl font-bold text-gray-800">1</p>
             </div>
         </div>
-    </div>
+
+        {{-- Pencapaian --}}
+        <div class="bg-white  shadow-md p-6 mt-6">
+            <h3 class="text-lg font-rubik font-bold mb-4 text-center">PENCAPAIAN</h3>
+            <div class="grid grid-cols-4 text-center text-lg font-semibold">
+                <div>
+                    <p class="text-gray-500 font-rubik">Kunjungan</p>
+                    <p class="text-3xl font-bold font-russo text-[#1F4C6D]">32</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 font-rubik">Kegiatan</p>
+                    <p class="text-3xl font-bold font-russo text-[#1F4C6D]">3</p>
+
+                </div>
+                <div>
+                    <p class="text-gray-500 font-rubik">Peminjaman</p>
+                    <p class="text-3xl font-bold font-russo text-[#1F4C6D]">0</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 font-rubik">Challenge</p>
+                    <p class="text-3xl font-bold font-russo text-[#1F4C6D]">1</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->

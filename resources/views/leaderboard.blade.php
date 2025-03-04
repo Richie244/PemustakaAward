@@ -3,13 +3,70 @@
 @section('content')
     <!-- Main Content -->
     <main class="flex-1 p-1">
-        <h2 class="text-3xl font-bold font-rubik mb-5">Leaderboard</h2>
+        <!-- Container Judul dan Dropdown -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-3xl font-bold font-rubik">Leaderboard</h2>
+
+            <!-- Dropdown Container -->
+            <div class="relative">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    type="button">
+                    Pilih Periode
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 absolute right-0 mt-2">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Earnings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Sign out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Background Biru -->
         <div class="relative bg-[rgba(31,76,109,1)] text-white pt-32 px-10 pb-28 rounded-t-[25px] min-h-[350px]">
             <div class="flex justify-center items-end">
                 <div class="text-center">
-                    <div class="w-36 h-36 bg-gray-300 rounded-full mx-auto border-4 border-[rgba(251,195,77,1)]">
+                    <div class="relative w-36 h-36 mx-auto">
+                        <!-- Foto Profil -->
+                        <img src="assets/images/profile.png" alt="User Profile"
+                            class="w-full h-full object-cover rounded-full border-4 border-[rgba(251,195,77,1)] bg-gray-300">
+
+                        <!-- Badge Peringkat -->
+                        <div
+                            class="absolute top-0 right-0 bg-[rgba(251,195,77,1)] text-[rgba(31,76,109,1)] font-bold text-sm px-3 py-1 rounded-full shadow-md">
+                            1st
+                        </div>
                     </div>
                     <p class="mt-2 font-bold font-rubik text-lg text-[rgba(251,195,77,1)]">User 1</p>
                     <p class="text-md font-russo">1200</p>
@@ -65,16 +122,26 @@
                 </tbody>
             </table>
         </div>
-
+        <br>
 
         <!-- My Ranking -->
-        <div class="mt-5 bg-white p-1 rounded-t-[25px] shadow-lg w-full flex items-center justify-center h-[55px]">
-            <h3 class="text-2xl font-bold font-rubik text-[rgba(31,76,109,1)] text-center">My Ranking</h3>
-            <div class="overflow-x-auto">
-            </div>
+        <div class="bg-white p-1 rounded-t-[25px] shadow-lg w-full flex items-center justify-center h-[45px]">
+            <h3 class="text-2xl font-bold font-rubik text-[rgba(31,76,109,1)] text-center">
+                My Ranking
+            </h3>
         </div>
-        <div class="overflow-hidden rounded-b-[25px]">
+        <div class="overflow-hidden rounded-b-[25px] w-full bg-white">
             <table class="w-full text-gray-700 border-collapse">
+                <thead class="p-0">
+                    <tr class="bg-white border-t border-gray-300">
+                        <th class="p-3 font-rubik text-left border-t border-gray-300">Place</th>
+                        <th class="p-3 font-rubik text-left border-t border-gray-300">Profile</th>
+                        <th class="p-3 font-rubik text-left border-t border-gray-300">Nama</th>
+                        <th class="p-3 font-rubik text-left border-t border-gray-300">NIM</th>
+                        <th class="p-3 font-rubik text-left border-t border-gray-300">Email</th>
+                        <th class="p-3 font-rubik text-center border-t border-gray-300">Points</th>
+                    </tr>
+                </thead>
                 <tbody>
                     @foreach ([['place' => 1, 'name' => 'User 1', 'nim' => '22410100016', 'email' => '22410100016@dinamika.ac.id', 'points' => 1200]] as $user)
                         <tr class="bg-[rgba(31,76,109,1)]">
@@ -90,7 +157,12 @@
                             <td class="p-3 text-white font-rubik font-bold">{{ $user['name'] }}</td>
                             <td class="p-3 text-white font-rubik font-bold">{{ $user['nim'] }}</td>
                             <td class="p-3 text-white font-rubik font-bold">{{ $user['email'] }}</td>
-                            <td class="p-3 text-right font-russo text-white">{{ $user['points'] }}</td>
+                            <td class="p-3 text-center font-russo text-white">
+                                <div class="flex items-center justify-center space-x-2">
+                                    <img src="{{ asset('assets/images/Poin.png') }}" alt="Poin Icon" class="w-5 h-5">
+                                    <span>{{ $user['points'] }}</span>
+                                </div>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
